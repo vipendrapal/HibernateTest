@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+<class name="com.test.hiber.States" table="state"  >
+ 
+<id name="Id" column="stateid"  >
+
+
+</id>
+ <property name="name" column="statename"  />
+ 
+<set name="city"  cascade="all" inverse="false">
+<key column="stateForeignId"/>
+<one-to-many class="com.test.hiber.City"/>
+</set> 
+
+ 
+</class>
+</hibernate-mapping>

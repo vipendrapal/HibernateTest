@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+<class name="com.test.hiber.Person" table="person"  >
+ 
+<id name="id" column="pid" />
+<discriminator column="personType" type="string"/>
+ 
+<property name="name" column="pname"/>
+<subclass name="com.test.hiber.Employee" discriminator-value="EmployeeClass" >
+
+<property name="personType" column="et" ></property>
+</subclass>
+ 
+<subclass name="com.test.hiber.Student" discriminator-value="personclass">
+
+<property name="personType" column="pt" ></property>
+</subclass>
+ 
+</class>
+</hibernate-mapping>
