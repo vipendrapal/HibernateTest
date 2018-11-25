@@ -16,7 +16,7 @@
 
 </bean> 
 <!-- <bean id="address2" class="com.vipin.spring.ioc.Address">
-<property name="houseNo" value="21"></property>
+<property name="houseNo" value="214"></property>
 <property name="city" value="banglore"></property>
 </bean> -->
   
